@@ -1,6 +1,6 @@
 $border-radius-wrapper: 10px;
-$container-main-padding-vertical: 4vh;
-$container-main-padding-horizontal: 12vw;
+$container-main-padding-vertical: 5vh;
+$container-main-padding-horizontal: 14vw;
 $container-card-height: calc(100vh - 2 * #{$container-main-padding-vertical});
 $container-card-width: calc(100vw - 2 * #{$container-main-padding-horizontal});
 
@@ -10,8 +10,14 @@ $container-card-width: calc(100vw - 2 * #{$container-main-padding-horizontal});
   font-style: normal;
 }
 @font-face {
-  font-family: "Raleway";
-  src: url("./fonts/Raleway-VariableFont_wght.ttf");
+  font-family: "Poppins-Regular";
+  src: url("./fonts/Poppins-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("./fonts/Poppins-Medium.ttf");
   font-style: normal;
 }
 
@@ -20,9 +26,10 @@ body {
   padding: 0px;
   height: 100%;
   width: 100%;
-  font-family: "Raleway", "Segoe UI", sans-serif;
+  font-family:  "Poppins-Regular", "Segoe UI", sans-serif;
   color: #3e4242;
 }
+
 .container-main {
   background: linear-gradient(
     60deg,
@@ -33,18 +40,13 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0px;
 }
+
 .container-card {
-  background: linear-gradient(
-    180deg,
-    rgb(250, 242, 248) 0%,
-    rgb(232, 242, 242) 60%,
-    rgb(227, 236, 234) 85%
-  );
+  background: rgb(244, 250, 249);
   margin: $container-main-padding-vertical $container-main-padding-horizontal
     $container-main-padding-vertical $container-main-padding-horizontal;
   height: $container-card-height;
@@ -53,37 +55,32 @@ body {
   border-radius: $border-radius-wrapper;
   box-shadow: 2px 3px 8px 0px #393b3b;
 }
+
 .wrap-login {
-  padding: 4% 4% 4% 4%;
-  flex: 2 0;
+  padding: 30px;
+  flex: 2.2 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; //default
   align-items: center;
 }
 .wrap-img {
-  flex: 3 0;
+  flex: 4 0;
   display: inline-flex;
   justify-content: flex-end;
 }
 .loginpage-img {
-  height: $container-card-height;
-  height: 100%;
   object-fit: cover;
-  min-width: 100%;
   max-width: 100%;
   border-radius: 0px $border-radius-wrapper $border-radius-wrapper 0px;
 }
 .title-header {
   font-family: "New-Athletic", Arial, Helvetica, sans-serif;
   font-size: 40px;
+  text-decoration: underline;
   color: #303131;
   font-weight: 500;
-  //-webkit-text-stroke: 1px black;
-  //text-shadow: 1px 1px #363a3a;
   text-align: center;
-  margin: 10px auto 30px auto;
-  flex-basis: 20%;
+  margin: 10px auto 20px auto;
 }
 .login-form {
   text-align: center;
@@ -91,7 +88,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .wrap-inputs {
@@ -99,39 +96,67 @@ body {
 }
 
 .wrap-input-div {
-  margin: 20px;
+  margin: 10px;
 }
 
 input {
-  font-family: "Raleway", "Segoe UI", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
+  font-family: "Poppins-Medium", "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #303131;
+  padding: 10px 20px 10px 20px;
+  background: #c9c9c9;
+  display: block;
+  height: 40px;
+  width: 250px;
+  border-radius: 25px;
+  line-height: 1.5;
+  border: none;
 }
 
-.wrap-submit-btn {
-  margin: 20px;
-}
-
-.submit-btn-login {
-  background: #258b47;
+.submit-btn-login{
+  background: #f17d7d;
   border: none;
   border-radius: 25px;
   color: #fff;
   display: block;
   height: 38px;
-  width: 75px;
+  width: 150px;
+  font-weight: bold;
+
+  &:hover {
+    background: #3e4242;
+  }
+}
+
+.wrap-forgotten-pwrd {
+  margin: 10px 0px 20px 0px;
+}
+
+.wrap-register {
+  margin: 30px 0px 10px 0px;
+  line-height: 1.5;
+}
+
+.register-link {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 a:hover {
-  color: #258b47;
+  color: #f17d7d;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 884px) {
-  .loginpage-img {
+@media screen and (max-width: 930px) {
+  .wrap-img {
     display: none;
   }
+
+  .wrap-login {
+    padding: 40px 100px 40px 100px;
+  }
+
 }
