@@ -13,37 +13,39 @@
     <div class="container-main">
       <div class="container-card">
         <div class="wrap-login">
-          <h2 class="title-header">Start your workout <br />by planning it</h2>
+          <h2 class="title-header">Start your workout <br />by planning it.</h2>
           <form class="login-form">
-            <div class="wrap-input" id="wrap-username">
-              <input class="login-input" id="username-input" value="Username" />
+            <div class="wrap-inputs">
+              <div class="wrap-input-div" id="wrap-username">
+                <input id="username-input" value="Username" />
+              </div>
+              <div class="wrap-input-div" id="wrap-password">
+                <input id="password-input" value="Password" />
+              </div>
             </div>
-            <div class="wrap-input" id="wrap-password">
-              <input class="login-input" id="password-input" value="Password" />
+            <div class="wrap-submit-btn">
+              <button class="submit-btn-login" type="submit">LOGIN</button>
             </div>
             <div class="wrap-forgottenpwrd">
               <a class="forgottenpwd-link">Forgotten password?</a>
-            </div>
-            <div class="wrap-submitlogin-btn">
-              <button type="submit">LOGIN</button>
             </div>
             <div class="wrap-register">
               Don't have an account yet?<br />
               <b><a class="register-link">Click here</a></b>
             </div>
           </form>
-          <div id="test"></div>
+          <!--<div id="test"></div>-->
         </div>
         <div class="wrap-img">
           <img
             class="loginpage-img"
-            src="loginpage-photo.jpeg"
+            src="../static/loginpage-photo.jpeg"
             alt="Login page photo"
           />
         </div>
       </div>
     </div>
-    <script>
+    <!--     <script>
       function displayWindowSize() {
         const vw = Math.max(
           document.documentElement.clientWidth || 0,
@@ -59,6 +61,6 @@
       }
       window.onresize = displayWindowSize;
       window.onload = displayWindowSize;
-    </script>
+    </script> -->
   </body>
 </html>
